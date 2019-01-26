@@ -7,37 +7,30 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="ContentViewController">
             <connections>
-                <outlet property="qrResultTextField" destination="28x-RS-iaW" id="Wbr-kJ-0Lh"/>
+                <outlet property="qrResultTextField" destination="0io-uX-OqT" id="ZPP-Pb-Bnq"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView id="Hz6-mo-xeY">
-            <rect key="frame" x="0.0" y="0.0" width="319" height="181"/>
+            <rect key="frame" x="0.0" y="0.0" width="300" height="160"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WQh-nT-bUL">
-                    <rect key="frame" x="137" y="50" width="44" height="19"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <buttonCell key="cell" type="roundRect" title="close" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="FCh-jK-loU">
-                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="cellTitle"/>
-                    </buttonCell>
-                    <connections>
-                        <action selector="closeButtonPressed:" target="-2" id="dgb-32-15f"/>
-                    </connections>
-                </button>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="28x-RS-iaW">
-                    <rect key="frame" x="69" y="96" width="232" height="22"/>
-                    <autoresizingMask key="autoresizingMask"/>
-                    <textFieldCell key="cell" lineBreakMode="clipping" title="result" id="3un-Nw-M1J">
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="0io-uX-OqT">
+                    <rect key="frame" x="18" y="123" width="264" height="17"/>
+                    <textFieldCell key="cell" selectable="YES" title="Multiline Label" id="USP-3h-syn">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
             </subviews>
+            <constraints>
+                <constraint firstItem="0io-uX-OqT" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" id="DmV-g6-Q4d"/>
+                <constraint firstAttribute="trailing" secondItem="0io-uX-OqT" secondAttribute="trailing" constant="20" id="W4j-XA-Q0H"/>
+                <constraint firstItem="0io-uX-OqT" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="20" id="ldp-It-a7D"/>
+            </constraints>
             <point key="canvasLocation" x="58.5" y="108.5"/>
         </customView>
     </objects>
