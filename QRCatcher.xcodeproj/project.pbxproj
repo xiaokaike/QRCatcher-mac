@@ -12,6 +12,14 @@
 		B3845E6021FC6254009BC4A8 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3845E5E21FC6254009BC4A8 /* MainMenu.xib */; };
 		B3845E6321FC6254009BC4A8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B3845E6221FC6254009BC4A8 /* main.m */; };
 		B3845E6E21FC6254009BC4A8 /* QRCatcherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B3845E6D21FC6254009BC4A8 /* QRCatcherTests.m */; };
+		B3845E9021FC669F009BC4A8 /* AXStatusItemPopup.m in Sources */ = {isa = PBXBuildFile; fileRef = B3845E8E21FC669F009BC4A8 /* AXStatusItemPopup.m */; };
+		B3845E9421FC66C0009BC4A8 /* ContentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3845E9121FC66BF009BC4A8 /* ContentViewController.xib */; };
+		B3845E9521FC66C0009BC4A8 /* ContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3845E9221FC66C0009BC4A8 /* ContentViewController.m */; };
+		B3845E9B21FC66E8009BC4A8 /* QrCatch.png in Resources */ = {isa = PBXBuildFile; fileRef = B3845E9721FC66E8009BC4A8 /* QrCatch.png */; };
+		B3845E9C21FC66E8009BC4A8 /* QrCatch@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B3845E9821FC66E8009BC4A8 /* QrCatch@2x.png */; };
+		B3845E9D21FC66E8009BC4A8 /* QrCatchWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = B3845E9921FC66E8009BC4A8 /* QrCatchWhite.png */; };
+		B3845E9E21FC66E8009BC4A8 /* QrCatchWhite@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B3845E9A21FC66E8009BC4A8 /* QrCatchWhite@2x.png */; };
+		B3845EA121FC677F009BC4A8 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = B3845EA021FC677F009BC4A8 /* Utils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +44,17 @@
 		B3845E6921FC6254009BC4A8 /* QRCatcherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QRCatcherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3845E6D21FC6254009BC4A8 /* QRCatcherTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QRCatcherTests.m; sourceTree = "<group>"; };
 		B3845E6F21FC6254009BC4A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3845E8E21FC669F009BC4A8 /* AXStatusItemPopup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXStatusItemPopup.m; sourceTree = "<group>"; };
+		B3845E8F21FC669F009BC4A8 /* AXStatusItemPopup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXStatusItemPopup.h; sourceTree = "<group>"; };
+		B3845E9121FC66BF009BC4A8 /* ContentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContentViewController.xib; sourceTree = "<group>"; };
+		B3845E9221FC66C0009BC4A8 /* ContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentViewController.m; sourceTree = "<group>"; };
+		B3845E9321FC66C0009BC4A8 /* ContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentViewController.h; sourceTree = "<group>"; };
+		B3845E9721FC66E8009BC4A8 /* QrCatch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QrCatch.png; sourceTree = "<group>"; };
+		B3845E9821FC66E8009BC4A8 /* QrCatch@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QrCatch@2x.png"; sourceTree = "<group>"; };
+		B3845E9921FC66E8009BC4A8 /* QrCatchWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QrCatchWhite.png; sourceTree = "<group>"; };
+		B3845E9A21FC66E8009BC4A8 /* QrCatchWhite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QrCatchWhite@2x.png"; sourceTree = "<group>"; };
+		B3845E9F21FC677E009BC4A8 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		B3845EA021FC677F009BC4A8 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,13 +96,11 @@
 		B3845E5821FC6253009BC4A8 /* QRCatcher */ = {
 			isa = PBXGroup;
 			children = (
-				B3845E5921FC6253009BC4A8 /* AppDelegate.h */,
-				B3845E5A21FC6253009BC4A8 /* AppDelegate.m */,
+				B3845E9621FC66D2009BC4A8 /* Resources */,
+				B3845E8D21FC669F009BC4A8 /* AXStatusItemPopup */,
+				B3845E7921FC659D009BC4A8 /* Code */,
+				B3845E7A21FC65AA009BC4A8 /* Supporting Files */,
 				B3845E5C21FC6254009BC4A8 /* Assets.xcassets */,
-				B3845E5E21FC6254009BC4A8 /* MainMenu.xib */,
-				B3845E6121FC6254009BC4A8 /* Info.plist */,
-				B3845E6221FC6254009BC4A8 /* main.m */,
-				B3845E6421FC6254009BC4A8 /* QRCatcher.entitlements */,
 			);
 			path = QRCatcher;
 			sourceTree = "<group>";
@@ -95,6 +112,51 @@
 				B3845E6F21FC6254009BC4A8 /* Info.plist */,
 			);
 			path = QRCatcherTests;
+			sourceTree = "<group>";
+		};
+		B3845E7921FC659D009BC4A8 /* Code */ = {
+			isa = PBXGroup;
+			children = (
+				B3845E9F21FC677E009BC4A8 /* Utils.h */,
+				B3845EA021FC677F009BC4A8 /* Utils.m */,
+				B3845E5921FC6253009BC4A8 /* AppDelegate.h */,
+				B3845E5A21FC6253009BC4A8 /* AppDelegate.m */,
+				B3845E5E21FC6254009BC4A8 /* MainMenu.xib */,
+				B3845E9321FC66C0009BC4A8 /* ContentViewController.h */,
+				B3845E9221FC66C0009BC4A8 /* ContentViewController.m */,
+				B3845E9121FC66BF009BC4A8 /* ContentViewController.xib */,
+			);
+			path = Code;
+			sourceTree = "<group>";
+		};
+		B3845E7A21FC65AA009BC4A8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B3845E6121FC6254009BC4A8 /* Info.plist */,
+				B3845E6221FC6254009BC4A8 /* main.m */,
+				B3845E6421FC6254009BC4A8 /* QRCatcher.entitlements */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B3845E8D21FC669F009BC4A8 /* AXStatusItemPopup */ = {
+			isa = PBXGroup;
+			children = (
+				B3845E8E21FC669F009BC4A8 /* AXStatusItemPopup.m */,
+				B3845E8F21FC669F009BC4A8 /* AXStatusItemPopup.h */,
+			);
+			path = AXStatusItemPopup;
+			sourceTree = "<group>";
+		};
+		B3845E9621FC66D2009BC4A8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B3845E9721FC66E8009BC4A8 /* QrCatch.png */,
+				B3845E9821FC66E8009BC4A8 /* QrCatch@2x.png */,
+				B3845E9921FC66E8009BC4A8 /* QrCatchWhite.png */,
+				B3845E9A21FC66E8009BC4A8 /* QrCatchWhite@2x.png */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,8 +239,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3845E9B21FC66E8009BC4A8 /* QrCatch.png in Resources */,
 				B3845E5D21FC6254009BC4A8 /* Assets.xcassets in Resources */,
+				B3845E9C21FC66E8009BC4A8 /* QrCatch@2x.png in Resources */,
+				B3845E9E21FC66E8009BC4A8 /* QrCatchWhite@2x.png in Resources */,
 				B3845E6021FC6254009BC4A8 /* MainMenu.xib in Resources */,
+				B3845E9D21FC66E8009BC4A8 /* QrCatchWhite.png in Resources */,
+				B3845E9421FC66C0009BC4A8 /* ContentViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,7 +263,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3845E9521FC66C0009BC4A8 /* ContentViewController.m in Sources */,
 				B3845E6321FC6254009BC4A8 /* main.m in Sources */,
+				B3845E9021FC669F009BC4A8 /* AXStatusItemPopup.m in Sources */,
+				B3845EA121FC677F009BC4A8 /* Utils.m in Sources */,
 				B3845E5B21FC6253009BC4A8 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,8 +1,8 @@
 //
 //  AppDelegate.h
-//  QRCatcher
+//  QrCatcher
 //
-//  Created by xiaokai on 1/26/19.
+//  Created by xiaokai on 1/25/19.
 //  Copyright © 2019 xiaokaike. All rights reserved.
 //
 
@@ -10,6 +10,7 @@
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
+@property (assign) IBOutlet NSWindow *window;
 
 @end
 
