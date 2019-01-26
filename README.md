@@ -1,0 +1,2 @@
+# QRCatcher
+> macOS qrcode catcher
