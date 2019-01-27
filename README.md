@@ -1,2 +1,4 @@
 # QRCatcher
-> macOS qrcode catcher
+> macOS app catch qrcode value from screen or clipboard
+
+![intro](./qr-screen.png)
