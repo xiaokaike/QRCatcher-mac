@@ -7,7 +7,8 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="ContentViewController">
             <connections>
-                <outlet property="qrResultTextField" destination="0io-uX-OqT" id="ZPP-Pb-Bnq"/>
+                <outlet property="qrStringScrollTextView" destination="GQv-Sf-CN7" id="oGZ-B3-hAt"/>
+                <outlet property="qrStringTextView" destination="uVw-0R-KPc" id="1iV-1V-Cu8"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
@@ -17,21 +18,31 @@
             <rect key="frame" x="0.0" y="0.0" width="300" height="160"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="0io-uX-OqT">
-                    <rect key="frame" x="18" y="123" width="264" height="17"/>
-                    <textFieldCell key="cell" selectable="YES" title="Multiline Label" id="USP-3h-syn">
-                        <font key="font" metaFont="system"/>
-                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                </textField>
+                <scrollView fixedFrame="YES" borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" hasVerticalScroller="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GQv-Sf-CN7">
+                    <rect key="frame" x="20" y="20" width="260" height="120"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <clipView key="contentView" ambiguous="YES" drawsBackground="NO" copiesOnScroll="NO" id="kgP-iB-eNp">
+                        <rect key="frame" x="0.0" y="0.0" width="260" height="120"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView ambiguous="YES" importsGraphics="NO" richText="NO" verticallyResizable="YES" spellingCorrection="YES" smartInsertDelete="YES" id="uVw-0R-KPc">
+                                <rect key="frame" x="0.0" y="0.0" width="260" height="120"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                <size key="minSize" width="260" height="120"/>
+                                <size key="maxSize" width="300" height="10000000"/>
+                                <color key="insertionPointColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            </textView>
+                        </subviews>
+                    </clipView>
+                    <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="uVO-8m-P8T">
+                        <rect key="frame" x="-100" y="-100" width="16" height="135"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                </scrollView>
             </subviews>
-            <constraints>
-                <constraint firstItem="0io-uX-OqT" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" id="DmV-g6-Q4d"/>
-                <constraint firstAttribute="trailing" secondItem="0io-uX-OqT" secondAttribute="trailing" constant="20" id="W4j-XA-Q0H"/>
-                <constraint firstItem="0io-uX-OqT" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="20" id="ldp-It-a7D"/>
-            </constraints>
-            <point key="canvasLocation" x="58.5" y="108.5"/>
+            <point key="canvasLocation" x="58" y="108"/>
         </customView>
     </objects>
 </document>
