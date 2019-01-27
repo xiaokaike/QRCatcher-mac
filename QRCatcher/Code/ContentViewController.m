@@ -8,6 +8,7 @@
 
 #import "ContentViewController.h"
 #import "Utils.h"
+#import "QRCodeHelper.h"
 
 @interface ContentViewController ()
 @property (strong) IBOutlet NSTextView *qrStringTextView;
@@ -28,34 +29,57 @@
 - (void)viewDidAppear {
     [super viewDidAppear];
 
-    [self readQRStringFromPasteBoard];
+    NSString *qrStringFromPasterBoard = [self readQRStringFromPasteBoard];
+    
+    if (qrStringFromPasterBoard) {
+        [self.qrStringTextView setString:qrStringFromPasterBoard];
+        [self.qrStringTextView setAlignment:NSTextAlignmentLeft];
+        return;
+    }
     
     NSString *scanResult = ScanQRCodeOnScreen();
     NSLog(@"scanResult %@", scanResult);
     
     if (scanResult) {
         [self.qrStringTextView setString:scanResult];
-    } else {
-        [self.qrStringTextView setString:@"empty"];
+        [self.qrStringTextView setAlignment:NSTextAlignmentLeft];
+        return;
     }
+    
+    [self.qrStringTextView setAlignment:NSTextAlignmentCenter];
+    [self.qrStringTextView setString:@"empty"];
 }
 
 - (NSString *)readQRStringFromPasteBoard {
     NSPasteboard *myPasteboard = [NSPasteboard generalPasteboard];
-    NSString *myString = [myPasteboard stringForType:NSPasteboardTypeString];
+    NSString *pbString = [myPasteboard stringForType:NSPasteboardTypeString];
     NSData *pasteboardData = [myPasteboard dataForType:NSPasteboardTypePNG];
-    NSLog(@"%@, and data %@", myString, pasteboardData);
+    // NSLog(@"%@, and data %@", pbString, pasteboardData);
+    
+    if (pasteboardData) {
+        NSString *qrcodeString = [QRCodeHelper getQRCodeContentWithImageData:pasteboardData];
+        if (qrcodeString) {
+            NSLog(@"imageData qrcode -> %@", qrcodeString);
+        }
+        return qrcodeString;
+    }
     
     NSPasteboardItem *dataHolder = [[NSPasteboardItem alloc] init];
     for (NSString *type in [myPasteboard types]) {
         //Get each type's data and add it to the new dataholder
-        NSLog(@"data type %@", type);
         NSData *data = [[myPasteboard dataForType:type] mutableCopy];
+//        NSLog(@"data type %@, -> %@", type, data);
         if (data) {
             [dataHolder setData:data forType:type];
         }
     }
     
+    if (pbString && [pbString containsString:@"png"]) {
+        NSData *imageData = [dataHolder dataForType:@"public.file-url"];
+        NSString *qrcodeString = [QRCodeHelper getQRCodeContentWithImageData:imageData];
+        NSLog(@"imageData -> %@", qrcodeString);
+    }
+
     return nil;
 }
 

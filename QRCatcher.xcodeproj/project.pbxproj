@@ -20,6 +20,7 @@
 		B3845E9D21FC66E8009BC4A8 /* QrCatchWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = B3845E9921FC66E8009BC4A8 /* QrCatchWhite.png */; };
 		B3845E9E21FC66E8009BC4A8 /* QrCatchWhite@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B3845E9A21FC66E8009BC4A8 /* QrCatchWhite@2x.png */; };
 		B3845EA121FC677F009BC4A8 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = B3845EA021FC677F009BC4A8 /* Utils.m */; };
+		B3845EA521FE1031009BC4A8 /* QRCodeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B3845EA421FE1031009BC4A8 /* QRCodeHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,8 @@
 		B3845E9A21FC66E8009BC4A8 /* QrCatchWhite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QrCatchWhite@2x.png"; sourceTree = "<group>"; };
 		B3845E9F21FC677E009BC4A8 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		B3845EA021FC677F009BC4A8 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
+		B3845EA321FE1031009BC4A8 /* QRCodeHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QRCodeHelper.h; sourceTree = "<group>"; };
+		B3845EA421FE1031009BC4A8 /* QRCodeHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QRCodeHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +128,8 @@
 				B3845E9321FC66C0009BC4A8 /* ContentViewController.h */,
 				B3845E9221FC66C0009BC4A8 /* ContentViewController.m */,
 				B3845E9121FC66BF009BC4A8 /* ContentViewController.xib */,
+				B3845EA321FE1031009BC4A8 /* QRCodeHelper.h */,
+				B3845EA421FE1031009BC4A8 /* QRCodeHelper.m */,
 			);
 			path = Code;
 			sourceTree = "<group>";
@@ -268,6 +273,7 @@
 				B3845E9021FC669F009BC4A8 /* AXStatusItemPopup.m in Sources */,
 				B3845EA121FC677F009BC4A8 /* Utils.m in Sources */,
 				B3845E5B21FC6253009BC4A8 /* AppDelegate.m in Sources */,
+				B3845EA521FE1031009BC4A8 /* QRCodeHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
