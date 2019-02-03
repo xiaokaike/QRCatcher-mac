@@ -100,8 +100,7 @@
 #pragma mark - Mouse Actions
 ////////////////////////////////////
 
-- (void)mouseDown:(NSEvent *)theEvent
-{
+- (void)mouseDown:(NSEvent *)theEvent {
     if (_popover.isShown) {
         [self hidePopover];
     } else {
@@ -111,7 +110,9 @@
 
 - (void)rightMouseDown:(NSEvent *)theEvent
 {
-    [self mouseDown:nil];
+    if ([self.delegate respondsToSelector:@selector(statusItemRightMouseDown:)]) {
+        [self.delegate statusItemRightMouseDown:theEvent];
+    }
 }
 
 ////////////////////////////////////

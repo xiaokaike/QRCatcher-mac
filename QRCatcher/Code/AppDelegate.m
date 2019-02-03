@@ -10,7 +10,7 @@
 #import "ContentViewController.h"
 #import "AXStatusItemPopup.h"
 
-@interface AppDelegate (){
+@interface AppDelegate () <AXStatusItemPopupDelegate>{
     AXStatusItemPopup *_statusItemPopup;
 }
 
@@ -33,6 +33,7 @@
     
     // globally set animation state (optional, defaults to YES)
     _statusItemPopup.animated = YES;
+    [_statusItemPopup setDelegate:self];
     
     //
     // --------------
@@ -45,6 +46,19 @@
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
     // Insert code here to tear down your application
+}
+
+- (void)onApplicationQuit:(NSMenuItem *)item {
+    exit(0);
+}
+
+#pragma axstatusitempopup delegate
+- (void)statusItemRightMouseDown:(NSEvent *)theEvent {
+    NSMenuItem *quitItem = [[NSMenuItem alloc] initWithTitle:@"Quit" action:@selector(onApplicationQuit:) keyEquivalent:@"Q"];
+    
+    NSMenu *rightMenu = [[NSMenu alloc] initWithTitle:@""];
+    [rightMenu addItem:quitItem];
+    [_statusItemPopup.statusItem popUpStatusItemMenu:rightMenu];
 }
 
 @end

@@ -8,7 +8,15 @@
 
 #import <Cocoa/Cocoa.h>
 
+@protocol AXStatusItemPopupDelegate <NSObject>
+- (void)statusItemRightMouseDown:(NSEvent *)theEvent;
+@optional
+
+@end
+
 @interface AXStatusItemPopup : NSView
+
+@property (nonatomic, weak) id<AXStatusItemPopupDelegate> delegate;
 
 // properties
 @property(assign, nonatomic, getter=isActive) BOOL active;
